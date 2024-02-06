@@ -1,0 +1,101 @@
+/*Homework 18*/
+/* style.css File */
+
+.inline-block {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.Logo {
+    width: 200px;
+    height: 200px;
+    padding: 1%;
+    text-align: center;
+}
+
+.PicOfMe {
+    height: 400px;
+    width: 400px; 
+    border-radius: 10%;
+    border: 5px solid #d9d9d9;
+}
+
+
+nav {
+    width: 73%;
+    padding: 1%;
+    background-color: #d9d9d9;
+}
+
+.headerlist {
+    width: 50%;
+    margin-left: auto;
+}
+
+/*My UX Skills section coded using CSS Flex*/
+
+.flexContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box {
+    width: 33%;
+    margin: auto;
+    padding: 5%;
+}
+
+/*My Work section constructed using CSS Flex*/
+
+.workGrid {
+    display: block;
+    grid-template-areas: 
+        'area1 area2'
+        'area3 area3';
+    /* Define the grid template areas */
+    grid-template-rows: auto; /* Optional: Adjust as needed */
+    grid-template-columns: 1fr 1fr; /* Optional: Adjust as needed */
+    gap: 10px; /* Optional: Adjust as needed */
+    justify-content: center;
+    align-items: center;
+}
+
+.box1 {
+    grid-area: sonat; 
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+.box2 {
+    grid-area: aspca; 
+    background-color: #e0e0e0;
+    padding: 10px;
+}
+
+.box3 {
+    grid-area: trafalgar; 
+    background-color: #d0d0d0;
+    padding: 10px;
+}
+
+
+@media only screen and (max-width: 600) {
+    .flexContainer {
+        flex-direction: column;
+    }
+
+    .flexContainer > div {
+        width: 100%; 
+    }
+
+    .workGrid {
+        grid-template-areas: 
+            'area1 area1'
+            'area2 area2'
+            'area3 area3';
+        grid-template-rows: auto auto auto;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
